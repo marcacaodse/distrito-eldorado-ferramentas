@@ -3,67 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Distrito Sanitário Eldorado - Conatatos Telefonicos das UBS</title>
+    <title>Distrito Sanitário Eldorado - Contatos Telefônicos das UBS</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <style>
         body {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f3f4f6;
+            color: #333;
         }
-        .gradient-bg {
-            background: linear-gradient(135deg, #1e3a8a 0%, #764ba2 100%);
+        .header-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
         }
         .card-hover {
-            transition: all 0.3s ease;
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
         }
         .card-hover:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
         }
-        .section-divider {
-            background: linear-gradient(90deg, #667eea, #764ba2);
-            height: 3px;
-            border-radius: 2px;
-        }
-        .home-button {
-            background-color: #000000;
-            color: white;
-            font-weight: bold;
-            padding: 8px 16px;
-            border-radius: 8px;
-            text-decoration: none;
-            transition: background-color 0.3s ease;
-        }
-        .home-button:hover {
-            background-color: #333333;
+        .container-custom {
+            max-width: 1200px;
         }
     </style>
 </head>
-<body class="bg-white">
+<body class="bg-gray-100">
+
     <!-- Header -->
-    <header class="gradient-bg text-white py-8 mb-8">
-        <div class="container mx-auto px-6 flex justify-between items-center">
-            <a href="index.html" class="home-button">
-                <i class="fas fa-home mr-2"></i>Tela Inicial
-            </a>
-            <div class="text-center flex-grow">
-                <i class="fas fa-hospital-alt text-5xl mb-4"></i>
-                <h1 class="text-4xl font-bold mb-2">Distrito Sanitário Eldorado</h1>
-                <p class="text-xl opacity-90">Contatos Unidades Basicas de Saúde</p>
+    <header class="header-bg text-white py-6 shadow-lg">
+        <div class="container mx-auto px-6 text-center">
+            <div class="flex justify-center items-center mb-4">
+                <a href="#" class="absolute left-6 text-white hover:text-blue-200 flex items-center text-lg bg-green-600 px-3 py-1 rounded">
+                    <i class="fas fa-home mr-2"></i>Tela Inicial
+                </a>
+                <div class="flex items-center">
+                    <i class="fas fa-hospital-alt text-4xl mr-3"></i>
+                    <h1 class="text-4xl font-extrabold">Distrito Sanitário Eldorado</h1>
+                </div>
             </div>
+            <p class="text-xl font-light">Contatos Unidades Básicas de Saúde</p>
         </div>
     </header>
-    
-        <!-- UBS -->
+
+    <!-- Main Content -->
+    <div class="container mx-auto px-6 py-12">
         <section class="mb-12">
-            <div class="flex items-center mb-8">
-                <i class="fas fa-hospital text-3xl text-green-600 mr-4"></i>
-                <h2 class="text-3xl font-bold text-gray-800">Unidades Básicas de Saúde (UBS)</h2>
-            </div>
-            <div class="section-divider mb-8"></div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <h2 class="text-4xl font-bold text-gray-800 mb-8 text-center">
+                <i class="fas fa-hospital-alt mr-3 text-blue-600"></i>Unidades Básicas de Saúde (UBS)
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Card 1: UBS Água Branca -->
                 <div class="bg-white rounded-lg shadow-lg p-6 border-l-4 border-green-500 card-hover">
                     <div class="flex items-center mb-4">
                         <i class="fas fa-clinic-medical text-2xl text-green-600 mr-3"></i>
@@ -76,6 +65,7 @@
                     </div>
                 </div>
 
+                <!-- Card 2: UBS Jardim Bandeirantes -->
                 <div class="bg-white rounded-lg shadow-lg p-6 border-l-4 border-green-500 card-hover">
                     <div class="flex items-center mb-4">
                         <i class="fas fa-clinic-medical text-2xl text-green-600 mr-3"></i>
@@ -89,18 +79,20 @@
                     </div>
                 </div>
 
+                <!-- Card 3: UBS Unidade XV -->
                 <div class="bg-white rounded-lg shadow-lg p-6 border-l-4 border-green-500 card-hover">
                     <div class="flex items-center mb-4">
                         <i class="fas fa-clinic-medical text-2xl text-green-600 mr-3"></i>
                         <h3 class="text-lg font-semibold text-gray-800">UBS Unidade XV</h3>
                     </div>
                     <div class="space-y-2 text-sm text-gray-600">
-                        <p><i class="fas fa-map-marker-alt mr-2"></i>Rua Oliveira nº 362</p>
+                        <p><i class="fas fa-map-marker-alt mr-2"></i>Rua Oliveira n° 362</p>
                         <p><i class="fas fa-phone mr-2"></i><a href="tel:3356-1214" class="text-green-600 hover:underline">3356-1214</a> / <a href="tel:3352-5271" class="text-green-600 hover:underline">3352-5271</a></p>
                         <p><i class="fas fa-envelope mr-2"></i><a href="mailto:cmcusfxv@gmail.com" class="text-green-600 hover:underline">cmcusfxv@gmail.com</a></p>
                     </div>
                 </div>
 
+                <!-- Card 4: UBS CSU Eldorado -->
                 <div class="bg-white rounded-lg shadow-lg p-6 border-l-4 border-green-500 card-hover">
                     <div class="flex items-center mb-4">
                         <i class="fas fa-clinic-medical text-2xl text-green-600 mr-3"></i>
@@ -114,6 +106,7 @@
                     </div>
                 </div>
 
+                <!-- Card 5: UBS Santa Cruz -->
                 <div class="bg-white rounded-lg shadow-lg p-6 border-l-4 border-green-500 card-hover">
                     <div class="flex items-center mb-4">
                         <i class="fas fa-clinic-medical text-2xl text-green-600 mr-3"></i>
@@ -126,6 +119,7 @@
                     </div>
                 </div>
 
+                <!-- Card 6: UBS Novo Eldorado -->
                 <div class="bg-white rounded-lg shadow-lg p-6 border-l-4 border-green-500 card-hover">
                     <div class="flex items-center mb-4">
                         <i class="fas fa-clinic-medical text-2xl text-green-600 mr-3"></i>
@@ -138,6 +132,7 @@
                     </div>
                 </div>
 
+                <!-- Card 7: UBS Bela Vista-Eq 68 -->
                 <div class="bg-white rounded-lg shadow-lg p-6 border-l-4 border-green-500 card-hover">
                     <div class="flex items-center mb-4">
                         <i class="fas fa-clinic-medical text-2xl text-green-600 mr-3"></i>
@@ -150,6 +145,7 @@
                     </div>
                 </div>
 
+                <!-- Card 8: UBS Jardim Eldorado -->
                 <div class="bg-white rounded-lg shadow-lg p-6 border-l-4 border-green-500 card-hover">
                     <div class="flex items-center mb-4">
                         <i class="fas fa-clinic-medical text-2xl text-green-600 mr-3"></i>
@@ -162,6 +158,7 @@
                     </div>
                 </div>
 
+                <!-- Card 9: UBS Parque São João -->
                 <div class="bg-white rounded-lg shadow-lg p-6 border-l-4 border-green-500 card-hover">
                     <div class="flex items-center mb-4">
                         <i class="fas fa-clinic-medical text-2xl text-green-600 mr-3"></i>
@@ -174,6 +171,7 @@
                     </div>
                 </div>
 
+                <!-- Card 10: UBS Perobas -->
                 <div class="bg-white rounded-lg shadow-lg p-6 border-l-4 border-green-500 card-hover">
                     <div class="flex items-center mb-4">
                         <i class="fas fa-clinic-medical text-2xl text-green-600 mr-3"></i>
@@ -199,6 +197,7 @@
             </div>
         </div>
     </footer>
+
 </body>
 </html>
 
